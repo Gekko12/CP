@@ -3,6 +3,7 @@ To increase the startup speed during solving competitive programming
 */
 
 #include <bits/stdc++.h>
+
 using namespace std;
 
 #define fast_io ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -12,9 +13,12 @@ using namespace std;
 using ll = long long;	
 //this is modern way and less error prone, because #define blindly substitute without checking 
 
-void solve()
+void solve(int n, int k)
 {
-	//logical part starts from here
+    int d = ceil((float)n/k);
+    int x = k - (k*d -n);
+
+    cout<<d<<" "<<x<<endl;
 }
 
 int main(void)
@@ -24,10 +28,11 @@ int main(void)
 	ll t;	//test-cases
 	cin>>t;
 	
+    int n, k;
 	while(t--)
 	{
-		//iterating part test cases
-		solve();
+        cin>>n>>k;
+		solve(n, k);
 	}
 	
 	return 0;

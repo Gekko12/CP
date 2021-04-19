@@ -1,3 +1,4 @@
+
 /*
 To increase the startup speed during solving competitive programming 
 */
@@ -12,23 +13,25 @@ using namespace std;
 using ll = long long;	
 //this is modern way and less error prone, because #define blindly substitute without checking 
 
-void solve()
+void solve(int r, int o, int c)
 {
-	//logical part starts from here
+    int left_overs = 20 - o;
+    ll res = (left_overs * 6)*6 + c;
+
+    if(res > r)
+        cout<<"YES \n";
+    else
+        cout<<"NO \n";
 }
 
 int main(void)
 {
 	fast_io;
 	
-	ll t;	//test-cases
-	cin>>t;
-	
-	while(t--)
-	{
-		//iterating part test cases
-		solve();
-	}
+	int r, o, c;
+    cin>>r>>o>>c;
+
+    solve(r, o, c);
 	
 	return 0;
 }
